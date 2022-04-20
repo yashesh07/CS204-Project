@@ -1,5 +1,7 @@
 # CS204-Project
 Semester 4 project
+This project focuses upon the topic of Railway Management System.We have built a website with the help of HTML,CSS,Javascript and PHP.
+We have used MYSQL for the database management.
 # Inital Discussion on Entities and Relational Queries:
 https://docs.google.com/document/d/1Ib86frCbZNe6JPXS0d4PoZjLpGd5cjSCjmGf6IXzAwg/edit?pli=1#heading=h.dabcddkawuwm
 # Midsemester Report:
