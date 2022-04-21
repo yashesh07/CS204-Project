@@ -9,5 +9,3 @@ https://docs.google.com/document/d/1-S-cJ72cGb3zaPSYkl8MpNf-Txyv2coBVec1jCa0Lp4/
 # Assignment 7:
 https://docs.google.com/document/d/1tx_JwISR2NIx2BW4SIb1lLXjZChnM6KAPsv88VWp-8c/edit
 
-
-some changes
