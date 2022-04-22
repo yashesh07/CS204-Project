@@ -153,7 +153,7 @@
 
             <div class="col-md-3">
               <label for="zip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="zip" placeholder="" required>
+              <input type="text" class="form-control" id="zip" placeholder="" required onchange="getAddress(this)">
               <div class="invalid-feedback">
                 Zip code required.
               </div>
@@ -265,5 +265,6 @@
     <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
       <script src="form-validation.js"></script>
+      <script src="pincode.js"></script>
   </body>
 </html>
