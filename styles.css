@@ -1,3 +1,8 @@
 .container {
     max-width: 960px;
   }
+
+.list {
+  max-height: 500px;
+  overflow-y: scroll;
+}
