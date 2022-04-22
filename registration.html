@@ -128,7 +128,6 @@
             <div class="col-12">
               <label for="username" class="form-label">Aadhar card</label>
               <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
                 <input type="text" class="form-control" id="username" placeholder="xxxx xxxx xxxx" required>
               <div class="invalid-feedback">
                   Your username is required.
@@ -152,28 +151,6 @@
               </div>
             </div>
 
-            <div class="col-md-5">
-              <label for="country" class="form-label">State</label>
-              <select class="form-select" id="country" required>
-                <option value="">Choose...</option>
-                <option>Gujarat</option>
-              </select>
-              <div class="invalid-feedback">
-                Please provide a valid state.
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <label for="state" class="form-label">City</label>
-              <select class="form-select" id="state" required>
-                <option value="">Choose...</option>
-                <option>City</option>
-              </select>
-              <div class="invalid-feedback">
-                Please provide a valid city.
-              </div>
-            </div>
-
             <div class="col-md-3">
               <label for="zip" class="form-label">Zip</label>
               <input type="text" class="form-control" id="zip" placeholder="" required>
@@ -181,6 +158,23 @@
                 Zip code required.
               </div>
             </div>
+
+            <div class="col-md-4">
+              <label for="state" class="form-label">City</label>
+              <input type="text" class="form-control" id="city" placeholder="" required disabled>
+              <div class="invalid-feedback">
+                Please provide a valid city.
+              </div>
+            </div>
+
+            <div class="col-md-5">
+              <label for="country" class="form-label">State</label>
+              <input type="text" class="form-control" id="state" placeholder="" required disabled>
+              <div class="invalid-feedback">
+                Please provide a valid state.
+              </div>
+            </div>
+
           </div>
 
           <hr class="my-4">
