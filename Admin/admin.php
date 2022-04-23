@@ -95,20 +95,23 @@
             </div>
         </div>
         <div id="test" style="width: 10000px; height: 10000px;">
-        <div class="queries rem">
-                <?php include 'PassengerTable.php'; ?>
-            </div>
-            <div class="queries rem" style="display: none;">
-                <?php include 'PassengerTicket.php'; ?>
-            </div>
-            <div class="queries rem" style="display: none;">
-                <?php include 'PaymentTable.php'; ?>
-            </div>
-            <div class="queries rem" style="display: none;">
-                <?php include 'TicketTable.php'; ?>
+        <div class="queries">
+                <?php echo "1";?>
             </div>
             <div class="queries" style="display: none;">
-                <?php include 'TrainTable.php'; ?>
+                <?php 
+                    include 'TrainTable.php';
+                ?>
+            </div>
+            <div class="queries" style="display: none;">
+                <?php include "TicketTable.php";?>
+            </div>
+            <div class="queries" style="display: none;">
+                <?php include 'PaymentTable.php';?>
+            </div>
+            <div class="queries" style="display: none;">
+                <?php 
+                include 'PassengerTable.php' ;?>
             </div>
         </div>
     </main>

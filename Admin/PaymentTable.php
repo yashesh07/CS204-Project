@@ -1,5 +1,5 @@
 <?php // LOOP TILL END OF DATA
-include 'ConnectionEST.php';
+include_once 'ConnectionEST.php';
 $caller = new Connection();
 $result = $caller->estConnection("SELECT * FROM payment");
 ?>

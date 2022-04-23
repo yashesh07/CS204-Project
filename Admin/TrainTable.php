@@ -1,7 +1,7 @@
 <?php // LOOP TILL END OF DATA
-include 'ConnectionEST.php';
-$caller = new Connection();
-$result = $caller->estConnection("SELECT * FROM train");
+include_once 'ConnectionEST.php';
+$caller1 = new Connection();
+$result = $caller1->estConnection("SELECT * FROM train");
 ?>
 
 

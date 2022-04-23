@@ -15,9 +15,7 @@ $servername='localhost:3307';
 // Checking for connections
  $mysqli = new mysqli($servername, $user,$password, $database);
 if ($mysqli->connect_error) {
-	die('Connect Error (' .
-	$mysqli->connect_errno . ') '.
-	$mysqli->connect_error);
+	die('Connect Error (' .$mysqli->connect_errno . ') '.$mysqli->connect_error);
 	}
 	
 	// SQL query to select data from database
