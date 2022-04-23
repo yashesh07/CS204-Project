@@ -69,5 +69,4 @@ $con=mysqli_connect($server,$username,$password);
      </form>
      </div>
 </body>
-
 </html>
