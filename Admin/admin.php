@@ -52,7 +52,7 @@
 <body>
     <main>
 
-        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white" style="width: 380px;">
+        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white border" style="width: 380px;">
             <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
                 <span class="fs-5 fw-semibold">List group</span>
             </a>

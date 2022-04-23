@@ -29,8 +29,14 @@ $result = $caller->estConnection("SELECT * FROM payment");
 </thead>
 <?php
 while ($rows = $result->fetch_assoc()) {
+    // var_dump($rows)
     ?>
-    
+        <!-- <?php
+
+            foreach($rows as $key => $value) {
+            echo $key;
+            }
+            ?> -->
         <tr>
             <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
             <td><?php echo $rows['transaction_ID']; ?></td>
