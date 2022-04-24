@@ -7,11 +7,11 @@ $user = 'root';
 $password = '';
 
 // Database name is gfg
-$database = 'railway_system';
+$database = 'railway system';
 
 // Server is localhost with
 // port number 3307
-$servername='localhost:3325';
+$servername='localhost:3307';
 // Checking for connections
  $mysqli = new mysqli($servername, $user,$password, $database);
 if ($mysqli->connect_error) {

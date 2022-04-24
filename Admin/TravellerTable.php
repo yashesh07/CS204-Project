@@ -1,7 +1,7 @@
 <?php // LOOP TILL END OF DATA
 include_once 'ConnectionEST.php';
-$caller1 = new Connection();
-$result = $caller1->estConnection("SELECT * FROM train");
+$caller = new Connection();
+$result = $caller->estConnection("SELECT * FROM traveller");
 ?>
 
 
@@ -21,31 +21,31 @@ $result = $caller1->estConnection("SELECT * FROM train");
 <table class="table">
 <thead class="table-dark">
    <tr>
-       <th>Train Number</th>
-       <th>Train Name</th>
-       <th>Source</th>
-       <th>Destination</th>
-       <th>Arraival Time</th>
-       <th>Departure Time</th>
-       <th>Seat Available</th>
-       <th>Reference Date</th>
+       <th>Passenger_ID</th>
+       <th>Train_Source</th>
+       <th>Train_Destination</th>
+       <th>Booking Date</th>
+       <th>Train No</th>
    </tr>
    
 </thead>
 <?php
 while ($rows = $result->fetch_assoc()) {
+    // var_dump($rows)
     ?>
-    
+        <!-- <?php
+
+            foreach($rows as $key => $value) {
+            echo $key;
+            }
+            ?> -->
         <tr>
             <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
-            <td><?php echo $rows['train_no']; ?></td>
-            <td><?php echo $rows['train_name']; ?></td>
+            <td><?php echo $rows['passenger_ID']; ?></td>
             <td><?php echo $rows['train_source']; ?></td>
             <td><?php echo $rows['train_destination']; ?></td>
-            <td><?php echo $rows['arrival_time']; ?></td>
-            <td><?php echo $rows['departure_time']; ?></td>
-            <td><?php echo $rows['seats_available']; ?></td>
-            <td><?php echo $rows['reference_date']; ?></td>
+            <td><?php echo $rows['passenger_bookingDate']; ?></td>
+            <td><?php echo $rows['train_no']; ?></td>
         </tr>
     <?php
     }

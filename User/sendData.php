@@ -12,17 +12,8 @@ $con=mysqli_connect($server,$username,$password);
    if(!$con){
        die("Connection to this database failed due to" . mysqli_connect_error());
    }
- $passenger_ID = $_POST['passenger_ID'];
-  $first_name = $_POST['first_name'];
-  $middle_name = $_POST['middle_name'];
-  $last_name = $_POST['last_name'];
-  $pincode = $_POST['pincode'];
-  $gender = $_POST['gender'];
-  $age = $_POST['age'];
-  $dob = $_POST['dob'];
-  $city = $_POST['city'];
-  $state = $_POST['state'];
-  $sql = "INSERT INTO `Railway System`.`passenger` (`passenger_ID`, `first_name`, `middle_name`, `last_name`, `pincode`, `city`, `state`,`dob`,`gender`,`age`) VALUES ('$passenger_ID', '$first_name', '$middle_name', '$last_name', '$pincode', '$city', '$state','$dob','$gender','$age');";
+$
+  $sql = "INSERT INTO `Railway System`.`payment` (`transaction_ID`, `passenger_ID`, `pnr_no`, `last_name`, `pincode`, `city`, `state`,`dob`,`gender`,`age`) VALUES ('$passenger_ID', '$first_name', '$middle_name', '$last_name', '$pincode', '$city', '$state','$dob','$gender','$age');";
 //    echo $sql;
 //Execute the query
   if($con->query($sql) == true){
@@ -36,7 +27,7 @@ $con=mysqli_connect($server,$username,$password);
   //Close the database connection
   $con->close();
 
-
+   }
 ?>
 
 <!DOCTYPE html>
@@ -55,14 +46,17 @@ $con=mysqli_connect($server,$username,$password);
         ?>
     <div>
      <form action="sendData.php" method="post">
-    <input type="text" name="name" id="name" placeholder="Enter your first name">
-     <input type="text" name="name" id="name" placeholder="Enter your middle name">
-     <input type="text" name="name" id="name" placeholder="Enter your last name">
-            <input type="text" name="age" id="age" placeholder="Enter your Age">
-            <input type="text" name="gender" id="gender" placeholder="Enter your gender">
-            <input type="date" name="date" id="date" placeholder="Enter your date of birth">
-            <input type="date" name="date" id="date" placeholder="Enter your date">
-            <textarea name="desc" id="desc" cols="30" rows="10" placeholder="ENter some other descripyion">
+    <input type="text" name="first_name" id="first_name" placeholder="Enter your first name"><br>
+     <input type="text" name="middle_name" id="middle_name" placeholder="Enter your middle name"><br>
+     <input type="text" name="last_name" id="last_name" placeholder="Enter your last name"><br>
+            <input type="text" name="age" id="age" placeholder="Enter your Age"><br>
+            <input type="text" name="gender" id="gender" placeholder="Enter your gender"><br>
+            <input type="date" name="dob" id="dob" placeholder="Enter your date of birth"><br>
+            <input type="text" name="passenger_ID" id="passenger_ID" placeholder="Enter your passenger id"><br>
+            <input type="text" name="pincode" id="pincode" placeholder="Enter your pincode"><br>
+            <input type="text" name="city" id="city" placeholder="Enter your city"><br>
+            <input type="text" name="state" id="state" placeholder="Enter your state"><br>
+            <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Enter some other description"><br>
 
             </textarea>
      <button class="btn btn-outline-light btn-lg">Submit</button>
