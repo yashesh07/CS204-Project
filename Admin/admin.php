@@ -94,7 +94,7 @@
                 </a>
             </div>
         </div>
-        <div id="test" style="width: 10000px; height: 10000px;">
+        <div class="scrollarea" id="test" style="width: 10000px; overflow: auto;">
         <div class="queries">
                 <?php echo "1";?>
             </div>
