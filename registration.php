@@ -224,7 +224,13 @@
 
           <div class="list">
             <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0">
-              <div class="card border-dark mb-3" onclick="print()">
+              
+              <?php 
+                include 'Admin/TrainTable.php';
+              ?>
+            
+            
+            <!-- <div class="card border-dark mb-3" onclick="print()">
                 <div class="card-header">
                   <span class="d-flex justify-content-between ">
                     <span class="card-text">Devnagri express</span>
@@ -238,67 +244,7 @@
                     <span class="card-text"><strong>Seats available : </strong><span class="badge bg-primary rounded-pill">3</span></span>
                   </p>
                 </div>
-              </div>
-              <div class="card border-dark mb-3">
-                <div class="card-header">
-                  <span class="d-flex justify-content-between ">
-                    <span class="card-text">Devnagri express</span>
-                    <span class="card-text">1234</span>
-                  </span>
-                </div>
-                <div class="card-body text-dark">
-                  <h5 class="card-title">Kanpur - Allahabad</h5>
-                  <p class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="card-text">00:00:00 - 23:59:59</span>
-                    <span class="card-text"><strong>Seats available : </strong><span class="badge bg-primary rounded-pill">3</span></span>
-                  </p>
-                </div>
-              </div>
-              <div class="card border-dark mb-3">
-                <div class="card-header">
-                  <span class="d-flex justify-content-between ">
-                    <span class="card-text">Devnagri express</span>
-                    <span class="card-text">1234</span>
-                  </span>
-                </div>
-                <div class="card-body text-dark">
-                  <h5 class="card-title">Kanpur - Allahabad</h5>
-                  <p class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="card-text">00:00:00 - 23:59:59</span>
-                    <span class="card-text"><strong>Seats available : </strong><span class="badge bg-primary rounded-pill">3</span></span>
-                  </p>
-                </div>
-              </div>
-              <div class="card border-dark mb-3">
-                <div class="card-header">
-                  <span class="d-flex justify-content-between ">
-                    <span class="card-text">Devnagri express</span>
-                    <span class="card-text">1234</span>
-                  </span>
-                </div>
-                <div class="card-body text-dark">
-                  <h5 class="card-title">Kanpur - Allahabad</h5>
-                  <p class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="card-text">00:00:00 - 23:59:59</span>
-                    <span class="card-text"><strong>Seats available : </strong><span class="badge bg-primary rounded-pill">3</span></span>
-                  </p>
-                </div>
-              </div>
-              <div class="card border-dark mb-3">
-                <div class="card-header">
-                  <span class="d-flex justify-content-between ">
-                    <span class="card-text">Devnagri express</span>
-                    <span class="card-text">1234</span>
-                  </span>
-                </div>
-                <div class="card-body text-dark">
-                  <h5 class="card-title">Kanpur - Allahabad</h5>
-                  <p class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="card-text">00:00:00 - 23:59:59</span>
-                    <span class="card-text"><strong>Seats available : </strong><span class="badge bg-primary rounded-pill">3</span></span>
-                  </p>
-                </div>
-              </div>
+              </div> -->              
             </div>
           </div>
 
