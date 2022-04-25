@@ -126,7 +126,7 @@
             <div class="row g-3">
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <input type="text" class="form-control" name="first_name"id="firstName" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
@@ -134,7 +134,7 @@
 
               <div class="col-sm-6">
                 <label for="lastName" class="form-label">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <input type="text" class="form-control" name="last_name"id="lastName" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
@@ -143,7 +143,7 @@
               <div class="col-12">
                 <label for="username" class="form-label">Aadhar card</label>
                 <div class="input-group has-validation">
-                  <input type="text" class="form-control" id="username" placeholder="xxxx xxxx xxxx" required>
+                  <input type="text" class="form-control" name="passenger_ID"id="username" placeholder="xxxx xxxx xxxx" required>
                   <div class="invalid-feedback">
                     Your username is required.
                   </div>
@@ -168,7 +168,7 @@
 
               <div class="col-md-3">
                 <label for="zip" class="form-label">Zip</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required onchange="getAddress(this)">
+                <input type="text" class="form-control" name="pincode"id="zip" placeholder="" required onchange="getAddress(this)">
                 <div class="invalid-feedback">
                   Zip code required.
                 </div>
@@ -176,7 +176,7 @@
 
               <div class="col-md-4">
                 <label for="state" class="form-label">City</label>
-                <input type="text" class="form-control" id="city" placeholder="" required disabled>
+                <input type="text" class="form-control" name="city"id="city" placeholder="" required disabled>
                 <div class="invalid-feedback">
                   Please provide a valid city.
                 </div>
@@ -184,7 +184,7 @@
 
               <div class="col-md-5">
                 <label for="country" class="form-label">State</label>
-                <input type="text" class="form-control" id="state" placeholder="" required disabled>
+                <input type="text" class="form-control" name="state" id="state" placeholder="" required disabled>
                 <div class="invalid-feedback">
                   Please provide a valid state.
                 </div>
@@ -331,7 +331,7 @@
 
             <hr class="my-4">
 
-            <button class="w-100 btn btn-primary btn-lg" type="submit">Confirm booking</button>
+            <button class="w-100 btn btn-primary btn-lg" name="bookingButton" type="submit">Confirm booking</button>
           </form>
         </div>
       </div>
