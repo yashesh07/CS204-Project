@@ -9,7 +9,7 @@
     <meta name="generator" content="Hugo 0.88.1">
     <title>Sidebars · Bootstrap v5.1</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/addTrainModals/">
 
 
 
@@ -17,6 +17,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -53,8 +55,9 @@
     <main>
 
         <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white border" style="width: 380px;">
-            <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
-                <span class="fs-5 fw-semibold">ADMIN MC</span>
+            <a href="" class="d-flex align-items-center justify-content-between flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">ADMIN PORTAL</span>
+                <span><button onclick="javascript: return false;" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#addTrainModal">Add train <i class="fa-solid fa-plus"></i></button></span>
             </a>
             <div class="list-group list-group-flush border-bottom scrollarea">
                 <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" onclick="changeQuery(0)" id="phpButton1">
@@ -123,6 +126,104 @@
                 
             </div>
         </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="addTrainModal" tabindex="-1" role="dialog" aria-labelledby="addTrainModalTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTrainModalTitle">Train details</h5>
+                    <button data-bs-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                <form class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="trainNumber" class="form-label">Number</label>
+                            <input type="text" class="form-control" id="trainNumber" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                            Valid first train number is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="trainName" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="trainName" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                            Valid train name is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="trainSource" class="form-label">Source</label>
+                            <input type="text" class="form-control" id="trainSource" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                            Valid first train source is required.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="trainDestination" class="form-label">Destination</label>
+                            <input type="text" class="form-control" id="trainDestination" placeholder="" value="" required>
+                            <div class="invalid-feedback">
+                            Valid train destination is required.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="arrivalTime" class="form-label">Arrival time</label>
+                            <div class="input-group has-validation">
+                            <input type="datetime-local" class="form-control" id="arrivalTime" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Valid arrival time is required.
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="destinationTime" class="form-label">Destination time</label>
+                            <div class="input-group has-validation">
+                            <input type="datetime-local" class="form-control" id="destinationTime" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Valid destination time is required.
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="totalSeats" class="form-label">Total seats</label>
+                            <div class="input-group has-validation">
+                            <input type="text" class="form-control" id="totalSeats" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Total seats are required.
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="referenceDate" class="form-label">Reference date</label>
+                            <div class="input-group has-validation">
+                            <input type="date" class="form-control" id="referenceDate" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Valid date is required.
+                            </div>
+                            </div>
+                        </div>
+
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
         <div class="scrollarea" id="test" style="width: 10000px; overflow: auto;">
         <div class="queries">
                 <?php include 'TravellerTable.php';?>
@@ -161,10 +262,15 @@
         </div>
     </main>
     <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    
     <script src="admin.js"></script>
-    <script src="testtest.php"></script>
 </body>
 
 </html>
+
+<script type="text/javascript">
+  $('#modal-id').on('shown.bs.modal', function () {
+      $(".modal-backdrop.in").hide();
+   })
+</script>
 
