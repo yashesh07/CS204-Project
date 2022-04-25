@@ -201,23 +201,26 @@
               </form>
             </div>
 
-            <form class="p-2 mb-2 bg-light border">
+            <form class="p-2 mb-2 bg-light border" action="searchTrain.php" method="POST">
               <input type="text" class="form-control" autocomplete="false" placeholder="From">
             </form>
             <i class="fa-solid fa-arrow-right-arrow-left fa-2x center" style="color:#6c757d;"></i>
-            <form class="p-2 mb-2 bg-light border">
+            <form class="p-2 mb-2 bg-light border" action="searchTrain.php" method="POST">
               <input type="text" class="form-control" autocomplete="false" placeholder="To">
             </form>
           </div>
 
           <div class="d-flex gap-5 justify-content" id="dropdownFilter">
-            <form class="p-2 mb-2 bg-light border">
+            <form class="p-2 mb-2 bg-light border" action="searchTrain.php" method="POST">
               <input type="date" class="form-control" autocomplete="false" placeholder="Choose date">
             </form>
           </div>
 
           <div class="d-flex gap-5 justify-content-center" id="dropdownFilter">
-            <button type="button" class="btn btn-primary">Get trains</button>
+            <form action="searchTrain.php" method="POST">
+                <button type="button" name="getTrainButton" class="btn btn-primary">Get trains</button>
+            </form>
+            
           </div>
 
           <hr class="my-4">
