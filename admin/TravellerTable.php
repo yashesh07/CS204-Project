@@ -22,8 +22,6 @@ $result = $caller->estConnection("SELECT * FROM traveller");
 <thead class="table-dark">
    <tr>
        <th>Passenger_ID</th>
-       <th>Train_Source</th>
-       <th>Train_Destination</th>
        <th>Booking Date</th>
        <th>Train No</th>
    </tr>
@@ -42,8 +40,6 @@ while ($rows = $result->fetch_assoc()) {
         <tr>
             <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
             <td><?php echo $rows['passenger_ID']; ?></td>
-            <td><?php echo $rows['train_source']; ?></td>
-            <td><?php echo $rows['train_destination']; ?></td>
             <td><?php echo $rows['passenger_bookingDate']; ?></td>
             <td><?php echo $rows['train_no']; ?></td>
         </tr>

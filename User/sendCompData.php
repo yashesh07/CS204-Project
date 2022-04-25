@@ -27,12 +27,12 @@ if(isset($_POST['bookingButton'])){
     $amount=$_POST['amount'];
 
     $train_no = $_POST['train_no'];
-    $train_name = $_POST['train_name'];
-    $train_source = $_POST['train_source'];
-    $train_destination = $_POST['train_destination'];
-    $arrivalTime = $_POST['arrivalTime'];
-    $departureTime = $_POST['departureTime'];
-    $seats_available = $_POST['seats_available'];
+    // $train_name = $_POST['train_name'];
+    // $train_source = $_POST['train_source'];
+    // $train_destination = $_POST['train_destination'];
+    // $arrivalTime = $_POST['arrivalTime'];
+    // $departureTime = $_POST['departureTime'];
+    // $seats_available = $_POST['seats_available'];
 
     $passenger_bookingDate=$_POST['passenger_bookingDate'];
 
@@ -50,8 +50,8 @@ VALUES ('$passenger_ID', '$first_name', '$last_name', '$pincode', '$city','$stat
 $sql3 = "INSERT INTO ticket (transaction_ID, passenger_ID, pnr_no)
 VALUES ('$transaction_ID', '$passenger_ID', '$pnr_no')";
 
-$sql4 = "INSERT INTO traveller (passenger_ID, train_source, train_destination,passenger_bookingDate,train_no)
-VALUES ('$passenger_ID', '$train_source', '$train_destination','$passenger_bookingDate','$train_no')";
+$sql4 = "INSERT INTO traveller (passenger_ID,passenger_bookingDate,train_no)
+VALUES ('$passenger_ID','$passenger_bookingDate','$train_no')";
 
 if ($conn->query($sql1) === TRUE) {
     echo "New record created successfully";
