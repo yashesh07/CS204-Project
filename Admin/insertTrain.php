@@ -4,7 +4,7 @@ $username = "root";
 $password = "";
 $dbname = "railway system";
 
-// Create connection
+// Create connections
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
