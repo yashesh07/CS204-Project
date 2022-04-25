@@ -1,18 +1,19 @@
 
-<?php // LOOP TILL END OF DATA
+<?php
 
-if(isset($_POST['getTrainButton'])){
-    echo "submit";
- $user_from = $_POST['user_from'];
- $user_to = $_POST['user_to'];
- $user_date = $_POST['user_date'];
-}
-$sql_getTrainDataQuery="SELECT * FROM TRAIN WHERE train_source=$user_form AND train_destination=$user_to AND reference_date=$user_date";
+    include_once 'Admin/ConnectionEST.php';
+    $caller1 = new Connection();
+
+    if(isset($_POST['getTrainButton'])){
+        $user_from = $_POST['user_from'];
+        $user_to = $_POST['user_to'];
+        $user_date = $_POST['user_date'];
+    }
+    $sql_getTrainDataQuery="SELECT * FROM TRAIN WHERE train_source='$user_from' AND train_destination='$user_to' AND reference_date='$user_date'";
 
 
-include_once 'ConnectionEST.php';
-$caller1 = new Connection();
-$result = $caller1->estConnection($sql_getTrainDataQuery);
+    $result = $caller1->estConnection($sql_getTrainDataQuery);
+
 ?>
 
 
@@ -34,12 +35,9 @@ $result = $caller1->estConnection($sql_getTrainDataQuery);
    <tr>
        <th>Train Number</th>
        <th>Train Name</th>
-       <th>Source</th>
-       <th>Destination</th>
        <th>Arraival Time</th>
        <th>Departure Time</th>
        <th>Seat Available</th>
-       <th>Reference Date</th>
    </tr>
    
 </thead>
@@ -51,12 +49,9 @@ while ($rows = $result->fetch_assoc()) {
             <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
             <td><?php echo $rows['train_no']; ?></td>
             <td><?php echo $rows['train_name']; ?></td>
-            <td><?php echo $rows['train_source']; ?></td>
-            <td><?php echo $rows['train_destination']; ?></td>
             <td><?php echo $rows['arrival_time']; ?></td>
             <td><?php echo $rows['departure_time']; ?></td>
             <td><?php echo $rows['seats_available']; ?></td>
-            <td><?php echo $rows['reference_date']; ?></td>
         </tr>
     <?php
     }

@@ -11,7 +11,7 @@ $database = 'railway system';
 
 // Server is localhost with
 // port number 3307
-$servername='localhost:3307';
+$servername='localhost:3325';
 // Checking for connections
  $mysqli = new mysqli($servername, $user,$password, $database);
 if ($mysqli->connect_error) {
