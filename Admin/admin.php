@@ -138,44 +138,44 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                <form class="needs-validation" novalidate>
+                <form action="insertTrain.php" method="post">
                     <div class="row g-3">
                         <div class="col-sm-6">
-                            <label for="trainNumber" class="form-label">Number</label>
-                            <input type="text" class="form-control" id="trainNumber" placeholder="" value="" required>
+                            <label for="trainNumber"  class="form-label">Number</label>
+                            <input type="text" name="trainNumber" class="form-control" id="trainNumber" placeholder="" required>   
                             <div class="invalid-feedback">
                             Valid first train number is required.
                             </div>
                         </div>
 
                         <div class="col-sm-6">
-                            <label for="trainName" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="trainName" placeholder="" value="" required>
+                            <label for="trainName"  class="form-label">Name</label>
+                            <input type="text" name="trainName" class="form-control" id="trainName" placeholder="" required>
                             <div class="invalid-feedback">
                             Valid train name is required.
                             </div>
                         </div>
 
                         <div class="col-sm-6">
-                            <label for="trainSource" class="form-label">Source</label>
-                            <input type="text" class="form-control" id="trainSource" placeholder="" value="" required>
+                            <label for="trainSource"  class="form-label">Source</label>
+                            <input type="text" name="trainSource" class="form-control" id="trainSource" placeholder="" required>
                             <div class="invalid-feedback">
                             Valid first train source is required.
                             </div>
                         </div>
 
                         <div class="col-sm-6">
-                            <label for="trainDestination" class="form-label">Destination</label>
-                            <input type="text" class="form-control" id="trainDestination" placeholder="" value="" required>
+                            <label for="trainDestination"  class="form-label">Destination</label>
+                            <input type="text" name="trainDestination" class="form-control" id="trainDestination" placeholder="" required>
                             <div class="invalid-feedback">
                             Valid train destination is required.
                             </div>
                         </div>
 
                         <div class="col-12">
-                            <label for="arrivalTime" class="form-label">Arrival time</label>
+                            <label for="arrivalTime"  class="form-label">Arrival time</label>
                             <div class="input-group has-validation">
-                            <input type="datetime-local" class="form-control" id="arrivalTime" placeholder="" required>
+                            <input type="datetime-local" name="arrivalTime" class="form-control" id="arrivalTime" placeholder="">
                             <div class="invalid-feedback">
                                 Valid arrival time is required.
                             </div>
@@ -183,19 +183,19 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="destinationTime" class="form-label">Destination time</label>
+                            <label for="destinationTime"  class="form-label">Destination time</label>
                             <div class="input-group has-validation">
-                            <input type="datetime-local" class="form-control" id="destinationTime" placeholder="" required>
+                            <input type="datetime-local" name="departureTime" class="form-control" id="destinationTime" placeholder="">
                             <div class="invalid-feedback">
-                                Valid destination time is required.
+                                Valid departure time is required.
                             </div>
                             </div>
                         </div>
 
                         <div class="col-12">
-                            <label for="totalSeats" class="form-label">Total seats</label>
+                            <label for="totalSeats"  class="form-label">Total seats</label>
                             <div class="input-group has-validation">
-                            <input type="text" class="form-control" id="totalSeats" placeholder="" required>
+                            <input type="text" name="totalSeats" class="form-control" id="totalSeats" placeholder="" required>
                             <div class="invalid-feedback">
                                 Total seats are required.
                             </div>
@@ -205,7 +205,7 @@
                         <div class="col-12">
                             <label for="referenceDate" class="form-label">Reference date</label>
                             <div class="input-group has-validation">
-                            <input type="date" class="form-control" id="referenceDate" placeholder="" required>
+                            <input type="date" name="referenceDate" class="form-control" id="referenceDate" placeholder="" required>
                             <div class="invalid-feedback">
                                 Valid date is required.
                             </div>
@@ -214,11 +214,11 @@
 
                         </div>
 
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button name="submitTrainDet"class="btn btn-primary">Add Train</button>
+                        </div>
                     </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
                 </div>
             </div>
