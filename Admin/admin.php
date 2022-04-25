@@ -54,7 +54,7 @@
 <body>
     <main>
 
-        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white border" style="width: 380px;">
+        <div class="d-flex flex-column align-items-stretch flex-shrink-0 bg-white border supreme-container" style="width: 380px;">
             <a href="" class="d-flex align-items-center justify-content-between flex-shrink-0 p-3 link-dark text-decoration-none border-bottom">
                 <span class="fs-5 fw-semibold">ADMIN PORTAL</span>
                 <span><button onclick="javascript: return false;" class="btn btn-outline-dark btn-sm" data-bs-toggle="modal" data-bs-target="#addTrainModal">Add train <i class="fa-solid fa-plus"></i></button></span>
@@ -128,7 +128,7 @@
         </div>
 
         <!-- Modal -->
-        <div class="modal fade" id="addTrainModal" tabindex="-1" role="dialog" aria-labelledby="addTrainModalTitle" aria-hidden="true">
+        <div class="modal fade" id="addTrainModal" tabindex="-1" role="dialog" aria-labelledby="addTrainModalTitle" aria-hidden="true" data-bs-backdrop="false">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                 <div class="modal-header">
@@ -224,7 +224,7 @@
             </div>
         </div>
 
-        <div class="scrollarea" id="test" style="width: 10000px; overflow: auto;">
+        <div class="scrollarea supreme-container" id="test" style="width: 10000px; overflow: auto;">
         <div class="queries">
                 <?php include 'TravellerTable.php';?>
             </div>
