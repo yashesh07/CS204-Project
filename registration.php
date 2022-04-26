@@ -82,7 +82,7 @@
             <li class="list-group-item d-flex justify-content-between lh-sm">
               <div>
                 <h6 class="my-0">Train name</h6>
-                <small class="text-muted">Rajdhani express</small>
+                <small class="text-muted" id="train_name">Rajdhani express</small>
               </div>
               <span class="text-muted">1234</span>
             </li>
@@ -218,62 +218,18 @@
                   </p>
                 </div>
                 <div class="d-flex gap-5 justify-content-center">
-                  <button name="getTrainButton" class="btn btn-primary">Get trains</button>
+                  <button name="getTrainButton" class="btn btn-primary" id="getTrain">Get trains</button>
                 </div>
               </form>
             </div>
-
-            <!-- <div class="d-flex gap-5 justify-content" id="dropdownFilter">
-              <form class="p-2 mb-2 bg-light border" action="searchTrain.php" method="POST" name="test">
-                <input type="date" name="user_date" class="form-control" autocomplete="false" placeholder="Choose date">
-              </form>
-            </div>
-
-            <div class="d-flex gap-5 justify-content-center" id="dropdownFilter">
-              <form action="searchTrain.php" method="POST" name="test">
-                <button name="getTrainButton" class="btn btn-primary">Get trains</button>
-              </form>
-
-            </div> -->
 
             <hr class="my-4">
 
             <div class="d-flex gap-5 justify-content-center">
-              <!-- <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0"> -->
 
-                <?php
-                // include 'searchTrain.php';
-                ?>
+<iframe width="1450" height="0" frameborder="0" name="frame" id="frame"></iframe>
 
-<iframe width="1450" height="300" frameborder="0" name="frame"></iframe>
-
-                <!-- <div class="card border-dark mb-3" onclick="print()">
-                <div class="card-header">
-                  <span class="d-flex justify-content-between ">
-                    <span class="card-text">Devnagri express</span>
-                    <span class="card-text">1234</span>
-                  </span>
-                </div>
-                <div class="card-body text-dark">
-                  <h5 class="card-title">Kanpur - Allahabad</h5>
-                  <p class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="card-text">00:00:00 - 23:59:59</span>
-                    <span class="card-text"><strong>Seats available : </strong><span class="badge bg-primary rounded-pill">3</span></span>
-                  </p>
-                </div>
-              </div> -->
-              <!-- </div> -->
             </div>
-
-            <!-- <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="save-info">
-            <label class="form-check-label" for="save-info">Save this information for next time</label>
-          </div> -->
 
             <hr class="my-4">
 
@@ -331,7 +287,7 @@
 
             <hr class="my-4">
 
-            <button class="w-100 btn btn-primary btn-lg" name="bookingButton" type="submit">Confirm booking</button>
+            <button class="w-100 btn btn-primary btn-lg" name="bookingButton" id="confirmBooking" type="submit">Confirm booking</button>
           </form>
         </div>
       </div>
@@ -352,7 +308,7 @@
 
   <script src="form-validation.js"></script>
   <script src="my_modules/pincode.js"></script>
-  <script src="index.js"></script>
+  <script src="main.js"></script>
 </body>
 
 </html>
