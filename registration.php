@@ -64,6 +64,59 @@
     </symbol>
   </svg>
 
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+      <img src="images/train2.jpg" class="d-block w-100" alt="Loading...">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Choose your destiny.</h1>
+            <p>collect <strong>MOMENTS</strong> , not <strong>things</strong></p>
+            <p><a class="btn btn-lg btn-primary" href="#registration">Book now</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+      <img src="images/train1.jpg" class="d-block w-100" alt="Loading...">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>The places you'll go.</h1>
+            <p>I'm thankful for this world, so I travel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Get details</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+      <img src="images/train3.jpg" class="d-block w-100" alt="Loading...">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>Be a part of our community.</h1>
+            <p>Responsibility is accepting that you are the cause and the solution of the matter.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Join us</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
   <div class="container">
     <main>
       <div class="py-5 text-center">
@@ -120,7 +173,7 @@
             </div>
           </form>
         </div>
-        <div class="col-md-7 col-lg-8">
+        <div class="col-md-7 col-lg-8" id="registration">
           <h4 class="mb-3">Registration</h4>
           <form action="sendCompData.php" method="POST">
             <div class="row g-3">
