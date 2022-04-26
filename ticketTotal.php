@@ -1,5 +1,4 @@
-<?php
-?>
+
 <?php // LOOP TILL END OF DATA
 include_once 'ConnectionEST.php';
 $caller = new Connection();
