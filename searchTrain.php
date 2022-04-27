@@ -30,7 +30,6 @@
 </head>
 
 <body>
-    <input hidden type="text" id = "train_id">
 <table class="table" id="selectedTrainTable">
 <thead class="table-dark">
    <tr>
@@ -64,3 +63,5 @@ while ($rows = $result->fetch_assoc()) {
 <script src="index.js"></script>
 </body>
 </html>
+
+    

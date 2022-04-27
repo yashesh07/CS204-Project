@@ -212,6 +212,19 @@
                             </div>
                         </div>
 
+                        <div class="col-sm-6">
+                            <label for="amount"  class="form-label">Amount</label>
+                            <div class="input-group has-validation">
+                            <span class="input-group-text">₹</span>
+                            <input type="text" name="amount" class="form-control" id="amount" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Total amount is required.
+                            </div>
+                            </div>
+                        </div>
+
+                        <div style="height: 15px"></div>
+
                         </div>
 
                         <div class="modal-footer">
