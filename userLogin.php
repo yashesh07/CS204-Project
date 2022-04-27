@@ -49,12 +49,12 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form action = "" method = "POST">
+  <form action = "ticketTotal.php" method = "POST">
     <img class="mb-4" src="images/logo-transparent.png" alt="" width="300" height="90">
     <h1 class="h3 mb-3 fw-normal">User portal login</h1>
 
     <div class="form-floating">
-      <input name="admin_id" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input name="pnr_no" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">PNR number</label>
     </div>
 

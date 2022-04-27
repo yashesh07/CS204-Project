@@ -1,9 +1,13 @@
 
 <?php // LOOP TILL END OF DATA
-include_once 'ConnectionEST.php';
+include_once 'admin/ConnectionEST.php';
 $caller = new Connection();
-$result = $caller->estConnection("SELECT train_no,train_name,train_source,train_destination,arrival_time,departure_time,pnr_no,first_name,last_name,gender,age FROM ((train NATURAL JOIN ticket) NATURAL JOIN (passenger NATURAL JOIN traveller));
-");
+
+if(isset($_POST['user_login_btn'])){
+    $pnr = $_POST['pnr_no'];
+}
+
+$result = $caller->estConnection("SELECT train.train_no ,train.train_name,train.train_source,train.train_destination,train.departure_time,train.arrival_time,ticket.pnr_no,passenger.first_name,passenger.last_name,passenger.gender,passenger.age FROM (train NATURAL JOIN ticket)NATURAL JOIN passenger WHERE ticket.pnr_no='$pnr';");
 ?>
 
 
