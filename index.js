@@ -20,10 +20,3 @@ document.getElementById('selectedTrainTable')
         row.cells[j].style.backgroundColor = "#B4FF9F";
     }
 });
-
-function changeToDefault() {
-    var x = document.getElementById("selectedTrainTable").getElementsByTagName("td");
-    for(var i = 0; i<x.length; i++){
-        x[i].style.backgroundColor = "red"; 
-    }           
-}

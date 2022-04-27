@@ -53,7 +53,7 @@ while ($rows = $result->fetch_assoc()) {
         <div class="even-info">
           <i class="fa fa-map-marker"></i>
           <p style="font-size: 1.5rem; letter-spacing: 4px;" id="amountInTicket">
-          ₹6000
+          ₹<?php echo $rows['amount']; ?>
           </p>
         </div>
         <div class="even-info">
