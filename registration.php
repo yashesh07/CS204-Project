@@ -130,7 +130,7 @@
       <div class="row g-5">
         <div class="col-md-7 col-lg-8" id="registration">
           <h4 class="mb-3">Registration</h4>
-          <form action="User/sendCompData.php" method="POST" id="registrationForm">
+          <form action="User/sendCompData.php" method="POST" id="registrationForm" target="confirmFrame">
             <div class="row g-3">
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">First name</label>
@@ -335,6 +335,34 @@
       </ul>
     </footer>
   </div>
+
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="addTrainModal" tabindex="-1" role="dialog" aria-labelledby="addTrainModalTitle" aria-hidden="true" data-bs-backdrop="false">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addTrainModalTitle">Booking status</h5>
+                    <button data-bs-dismiss="modal">
+                    <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                
+                    
+                      <iframe src="" frameborder="0" name="confirmFrame" id="confirmFrame" width="1450" height="100"></iframe>
+
+                        <div style="height: 15px"></div>
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button name="submitTrainDet"class="btn btn-primary">ok, got it!</button>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div> -->
 
 
   <script src="/docs/5.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
