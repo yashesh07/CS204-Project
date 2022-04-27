@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -49,16 +48,16 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form action = "admin/admin.php" method = "POST">
+  <form action="adminLoginChk.php" method="POST">
     <img class="mb-4" src="images/logo-transparent.png" alt="" width="300" height="90">
     <h1 class="h3 mb-3 fw-normal">Admin portal login</h1>
 
     <div class="form-floating">
-      <input name="admin_id" type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="text" name="admin_id" class="form-control" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Admin ID</label>
     </div>
     <div class="form-floating">
-      <input name="admin_pass" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" name="admin_pass" class="form-control" id="floatingPassword" placeholder="Password">
       <label for="floatingPassword">Password</label>
     </div>
 
@@ -66,7 +65,7 @@
 
     </div>
 
-    <button class="w-100 btn btn-lg btn-primary" name ="admin_login_btn">submit</button>
+    <button class="w-100 btn btn-lg btn-primary" name="loginbutton">Log in</button>
     <p class="mt-5 mb-3 text-muted">© 2020–2022 DOPA70-1</p>
   </form>
 </main>
@@ -75,12 +74,3 @@
     
   </body>
 </html>
-
-<?php
-    if(isset($_POST['admin_login_btn'])){
-        $adminID = $_POST['admin_id'];
-        $adminPassword = $_POST['admin_pass'];
-        
-        echo $adminID;
-    }
-?>

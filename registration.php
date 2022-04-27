@@ -101,15 +101,13 @@
       <img src="images/train3.jpg" class="d-block w-100" alt="Loading...">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
-        <form action="adminLogin.php" method="POST">
-          <div class="container">
+        <div class="container">
             <div class="carousel-caption text-end">
               <h1>Be a part of our community.</h1>
               <p>Responsibility is accepting that you are the cause and the solution of the matter.</p>
-              <p><button class="btn btn-lg btn-primary" href="#">Join us</button></p>
+              <p><a class="btn btn-lg btn-primary" href="adminLogin.php">Join us</a></p>
             </div>
           </div>
-        </form>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
