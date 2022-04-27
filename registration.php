@@ -92,7 +92,7 @@
             <div class="carousel-caption">
               <h1>The places you'll go.</h1>
               <p>I'm thankful for this world, so I travel.</p>
-              <p><button class="btn btn-lg btn-primary">Get details</button></p>
+              <p><a class="btn btn-lg btn-primary" href="userLogin.php">Get details</a></p>
             </div>
           </div>
         </form>

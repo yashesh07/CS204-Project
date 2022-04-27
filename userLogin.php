@@ -62,7 +62,7 @@
 
     </div>
 
-    <button class="w-100 btn btn-lg btn-primary" name ="user_login_btn">Get ticket!</button>
+    <a class="w-100 btn btn-lg btn-primary" name ="user_login_btn" href="User/ticketPortal.php">Get ticket!</a>
     <p class="mt-5 mb-3 text-muted">© 2020–2022 DOPA70-1</p>
   </form>
 </main>
