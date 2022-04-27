@@ -49,7 +49,7 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form action = "ticketTotal.php" method = "POST">
+  <form action = "User/ticketPortal.php" method = "POST">
     <img class="mb-4" src="images/logo-transparent.png" alt="" width="300" height="90">
     <h1 class="h3 mb-3 fw-normal">User portal login</h1>
 
@@ -62,7 +62,7 @@
 
     </div>
 
-    <a class="w-100 btn btn-lg btn-primary" name ="user_login_btn" href="User/ticketPortal.php">Get ticket!</a>
+    <button class="w-100 btn btn-lg btn-primary" name ="user_login_btn">Get ticket!</button>
     <p class="mt-5 mb-3 text-muted">© 2020–2022 DOPA70-1</p>
   </form>
 </main>
