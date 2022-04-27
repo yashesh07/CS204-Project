@@ -128,8 +128,8 @@
       </div>
 
       <div class="row g-5">
-        <div class="col-md-5 col-lg-4 order-md-last">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <!-- <div class="col-md-5 col-lg-4 order-md-last"> -->
+          <!-- <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-primary">Your details</span>
             <span class="badge bg-primary rounded-pill">3</span>
           </h4>
@@ -166,18 +166,18 @@
               <span>Total (USD)</span>
               <strong>$20</strong>
             </li>
-          </ul>
+          </ul> -->
 
-          <form class="card p-2">
+          <!-- <form class="card p-2">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Promo code">
               <button type="submit" class="btn btn-secondary">Redeem</button>
             </div>
           </form>
-        </div>
+        </div> -->
         <div class="col-md-7 col-lg-8" id="registration">
           <h4 class="mb-3">Registration</h4>
-          <form action="sendCompData.php" method="POST">
+          <form action="User/sendCompData.php" method="POST" id="registrationForm">
             <div class="row g-3">
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">First name</label>
@@ -246,7 +246,7 @@
               </div>
 
             </div>
-
+            </form>
             <hr class="my-4">
 
             <div class="d-flex gap-5 justify-content-center" id="dropdownFilter">
@@ -342,8 +342,7 @@
 
             <hr class="my-4">
 
-            <button class="w-100 btn btn-primary btn-lg" name="bookingButton" id="confirmBooking" type="submit">Confirm booking</button>
-          </form>
+            <button class="w-100 btn btn-primary btn-lg" name="bookingButton" id="confirmBooking" form="registrationForm">Confirm booking</button>
         </div>
       </div>
     </main>
@@ -367,3 +366,4 @@
 </body>
 
 </html>
+

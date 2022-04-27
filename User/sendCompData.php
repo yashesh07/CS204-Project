@@ -11,9 +11,11 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $time=time();
-echo $time;
+echo $_COOKIE['train_number'];
 
 if(isset($_POST['bookingButton'])){
+
+  echo $_POST['train_id'];
     $passenger_ID=$_POST['passenger_ID']/1000;
     $first_name=$_POST['first_name'];
     $last_name=$_POST['last_name'];
