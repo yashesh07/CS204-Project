@@ -87,25 +87,29 @@
       <img src="images/train1.jpg" class="d-block w-100" alt="Loading...">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>The places you'll go.</h1>
-            <p>I'm thankful for this world, so I travel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Get details</a></p>
+        <form action="userLogin.php" method="POST">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>The places you'll go.</h1>
+              <p>I'm thankful for this world, so I travel.</p>
+              <p><button class="btn btn-lg btn-primary">Get details</button></p>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
       <div class="carousel-item" data-bs-interval="5000">
       <img src="images/train3.jpg" class="d-block w-100" alt="Loading...">
         <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>Be a part of our community.</h1>
-            <p>Responsibility is accepting that you are the cause and the solution of the matter.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Join us</a></p>
+        <form action="adminLogin.php" method="POST">
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Be a part of our community.</h1>
+              <p>Responsibility is accepting that you are the cause and the solution of the matter.</p>
+              <p><button class="btn btn-lg btn-primary" href="#">Join us</button></p>
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
