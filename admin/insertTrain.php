@@ -20,10 +20,11 @@ if(isset($_POST['submitTrainDet'])){
     $referenceDate = $_POST['referenceDate'];
     $departureTime = $_POST['departureTime'];
     $totalSeats = $_POST['totalSeats'];
+    $amount=$_POST['amount'];
 }
 
-$sql = "INSERT INTO train (train_no, train_name, train_source, train_destination, arrival_time, departure_time, seats_available,reference_date)
-VALUES ('$trainNumber', '$trainName', '$trainSource', '$trainDestination', '$arrivalTime','$departureTime','$totalSeats','$referenceDate')";
+$sql = "INSERT INTO train (train_no, train_name, train_source, train_destination, arrival_time, departure_time, seats_available,reference_date,amount)
+VALUES ('$trainNumber', '$trainName', '$trainSource', '$trainDestination', '$arrivalTime','$departureTime','$totalSeats','$referenceDate','$amount')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";

@@ -231,7 +231,7 @@
 
               <div class="col-md-4">
                 <label for="state" class="form-label">City</label>
-                <input type="text" class="form-control" name="city"id="city" placeholder="" required disabled>
+                <input type="text" class="form-control" name="city"id="city" placeholder="">
                 <div class="invalid-feedback">
                   Please provide a valid city.
                 </div>
@@ -239,7 +239,7 @@
 
               <div class="col-md-5">
                 <label for="country" class="form-label">State</label>
-                <input type="text" class="form-control" name="state" id="state" placeholder="" required disabled>
+                <input type="text" class="form-control" name="state" id="state" placeholder="">
                 <div class="invalid-feedback">
                   Please provide a valid state.
                 </div>

@@ -11,11 +11,11 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 $time=time();
-echo $_COOKIE['train_number'];
+// echo $_COOKIE['train_number'];
+// echo $_COOKIE['amount'];
 
 if(isset($_POST['bookingButton'])){
-
-  echo $_POST['train_id'];
+  
     $passenger_ID=$_POST['passenger_ID']/1000;
     $first_name=$_POST['first_name'];
     $last_name=$_POST['last_name'];
@@ -28,9 +28,9 @@ if(isset($_POST['bookingButton'])){
 
     $transaction_ID=$time%1000;
     $pnr_no=($time%1000)+999;
-    $amount=$_POST['amount'];
+    $amount=$_COOKIE['amount'];
 
-    $train_no = 1122;
+    $train_no = $_COOKIE['train_number'];
     // $train_name = $_POST['train_name'];
     // $train_source = $_POST['train_source'];
     // $train_destination = $_POST['train_destination'];
@@ -40,7 +40,7 @@ if(isset($_POST['bookingButton'])){
 
     $passenger_bookingDate=$_POST['passenger_bookingDate'];
 
-    echo gettype($passenger_ID);
+    // echo gettype($passenger_ID);
 }
 
 
