@@ -11,18 +11,19 @@ document.getElementById('selectedTrainTable')
 
 document.getElementById('selectedTrainTable')
 .addEventListener('click', function (item) {
-
+    var x = document.getElementById("selectedTrainTable").getElementsByTagName("td");
+    for(var i = 0; i<x.length; i++){
+        x[i].style.backgroundColor = "transparent"; 
+    } 
     var row = item.path[1];
-    row.style.backgroundColor = "#B4FF9F";
-
     for (var j = 0; j < row.cells.length; j++) {
-
+        row.cells[j].style.backgroundColor = "#B4FF9F";
     }
-
 });
 
-function btnClick() {
+function changeToDefault() {
     var x = document.getElementById("selectedTrainTable").getElementsByTagName("td");
-    
-    x[0].style.backgroundColor = "yellow";            
+    for(var i = 0; i<x.length; i++){
+        x[i].style.backgroundColor = "red"; 
+    }           
 }
