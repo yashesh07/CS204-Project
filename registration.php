@@ -64,6 +64,61 @@
     </symbol>
   </svg>
 
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+      <img src="images/train2.jpg" class="d-block w-100" alt="Loading...">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Choose your destiny.</h1>
+            <p>collect <strong>MOMENTS</strong> , not <strong>things</strong></p>
+            <p><a class="btn btn-lg btn-primary" href="#registration">Book now</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+      <img src="images/train1.jpg" class="d-block w-100" alt="Loading...">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <form action="userLogin.php" method="POST">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>The places you'll go.</h1>
+              <p>I'm thankful for this world, so I travel.</p>
+              <p><button class="btn btn-lg btn-primary">Get details</button></p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+      <img src="images/train3.jpg" class="d-block w-100" alt="Loading...">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+            <div class="carousel-caption text-end">
+              <h1>Be a part of our community.</h1>
+              <p>Responsibility is accepting that you are the cause and the solution of the matter.</p>
+              <p><a class="btn btn-lg btn-primary" href="adminLogin.php">Join us</a></p>
+            </div>
+          </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
   <div class="container">
     <main>
       <div class="py-5 text-center">
@@ -73,8 +128,8 @@
       </div>
 
       <div class="row g-5">
-        <div class="col-md-5 col-lg-4 order-md-last">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
+        <!-- <div class="col-md-5 col-lg-4 order-md-last"> -->
+          <!-- <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-primary">Your details</span>
             <span class="badge bg-primary rounded-pill">3</span>
           </h4>
@@ -111,18 +166,18 @@
               <span>Total (USD)</span>
               <strong>$20</strong>
             </li>
-          </ul>
+          </ul> -->
 
-          <form class="card p-2">
+          <!-- <form class="card p-2">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Promo code">
               <button type="submit" class="btn btn-secondary">Redeem</button>
             </div>
           </form>
-        </div>
-        <div class="col-md-7 col-lg-8">
+        </div> -->
+        <div class="col-md-7 col-lg-8" id="registration">
           <h4 class="mb-3">Registration</h4>
-          <form class="needs-validation" novalidate>
+          <form action="User/sendCompData.php" method="POST" id="registrationForm">
             <div class="row g-3">
               <div class="col-sm-6">
                 <label for="firstName" class="form-label">First name</label>
@@ -191,7 +246,7 @@
               </div>
 
             </div>
-
+            </form>
             <hr class="my-4">
 
             <div class="d-flex gap-5 justify-content-center" id="dropdownFilter">
@@ -287,8 +342,7 @@
 
             <hr class="my-4">
 
-            <button class="w-100 btn btn-primary btn-lg" name="bookingButton" id="confirmBooking" type="submit">Confirm booking</button>
-          </form>
+            <button class="w-100 btn btn-primary btn-lg" name="bookingButton" id="confirmBooking" form="registrationForm">Confirm booking</button>
         </div>
       </div>
     </main>
@@ -312,3 +366,4 @@
 </body>
 
 </html>
+

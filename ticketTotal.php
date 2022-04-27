@@ -1,19 +1,9 @@
 
-<?php
-
-    include_once 'Admin/ConnectionEST.php';
-    $caller1 = new Connection();
-
-    if(isset($_POST['getTrainButton'])){
-        $user_from = $_POST['user_from'];
-        $user_to = $_POST['user_to'];
-        $user_date = $_POST['user_date'];
-    }
-    $sql_getTrainDataQuery="SELECT * FROM TRAIN WHERE train_source='$user_from' AND train_destination='$user_to' AND reference_date='$user_date'";
-
-
-    $result = $caller1->estConnection($sql_getTrainDataQuery);
-
+<?php // LOOP TILL END OF DATA
+include_once 'ConnectionEST.php';
+$caller = new Connection();
+$result = $caller->estConnection("SELECT train_no,train_name,train_source,train_destination,arrival_time,departure_time,pnr_no,first_name,last_name,gender,age FROM ((train NATURAL JOIN ticket) NATURAL JOIN (passenger NATURAL JOIN traveller));
+");
 ?>
 
 
@@ -30,14 +20,20 @@
 </head>
 
 <body>
-<table class="table" id="selectedTrainTable">
+<table class="table">
 <thead class="table-dark">
    <tr>
        <th>Train Number</th>
        <th>Train Name</th>
+       <th>Source</th>
+       <th>Destination</th>
        <th>Arraival Time</th>
        <th>Departure Time</th>
-       <th>Seat Available</th>
+       <th>Pnr_no</th>
+       <th>First name</th>
+       <th>Last name</th>
+       <th>Gender</th>
+       <th>Age</th>
    </tr>
    
 </thead>
@@ -49,9 +45,15 @@ while ($rows = $result->fetch_assoc()) {
             <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
             <td><?php echo $rows['train_no']; ?></td>
             <td><?php echo $rows['train_name']; ?></td>
+            <td><?php echo $rows['train_source']; ?></td>
+            <td><?php echo $rows['train_destination']; ?></td>
             <td><?php echo $rows['arrival_time']; ?></td>
             <td><?php echo $rows['departure_time']; ?></td>
-            <td><?php echo $rows['seats_available']; ?></td>
+            <td><?php echo $rows['pnr_no']; ?></td>
+            <td><?php echo $rows['first_name']; ?></td>
+            <td><?php echo $rows['last_name']; ?></td>
+            <td><?php echo $rows['gender']; ?></td>
+            <td><?php echo $rows['age']; ?></td>
         </tr>
     <?php
     }
@@ -60,8 +62,6 @@ while ($rows = $result->fetch_assoc()) {
   
 </tbody>
 </table>
-<script src="index.js"></script>
+
 </body>
 </html>
-
-    
