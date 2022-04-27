@@ -49,7 +49,7 @@
   <body class="text-center">
     
 <main class="form-signin">
-  <form action = "ticketTotal.php" method = "POST">
+  <form action = "User/ticketPortal.php" method = "POST">
     <img class="mb-4" src="images/logo-transparent.png" alt="" width="300" height="90">
     <h1 class="h3 mb-3 fw-normal">User portal login</h1>
 
