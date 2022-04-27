@@ -38,6 +38,7 @@
        <th>Arraival Time</th>
        <th>Departure Time</th>
        <th>Seat Available</th>
+       <th>Amount</th>
    </tr>
    
 </thead>
@@ -52,6 +53,7 @@ while ($rows = $result->fetch_assoc()) {
             <td><?php echo $rows['arrival_time']; ?></td>
             <td><?php echo $rows['departure_time']; ?></td>
             <td><?php echo $rows['seats_available']; ?></td>
+            <td><?php echo $rows['amount']; ?></td>
         </tr>
     <?php
     }

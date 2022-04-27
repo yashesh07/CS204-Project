@@ -23,7 +23,6 @@ $result = $caller->estConnection("SELECT * FROM passenger WHERE age<18 ");
    <tr>
        <th>Passenger ID</th>
        <th>First Name</th>
-       <th>Middle Name</th>
        <th>Last Name</th>
        <th>Pincode</th>
        <th>City</th>
@@ -42,7 +41,6 @@ while ($rows = $result->fetch_assoc()) {
             <!--FETCHING DATA FROM EACH ROW OF EVERY COLUMN-->
             <td><?php echo $rows['passenger_ID']; ?></td>
             <td><?php echo $rows['first_name']; ?></td>
-            <td><?php echo $rows['middle_name']; ?></td>
             <td><?php echo $rows['last_name']; ?></td>
             <td><?php echo $rows['pincode']; ?></td>
             <td><?php echo $rows['city']; ?></td>

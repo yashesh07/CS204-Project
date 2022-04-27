@@ -25,10 +25,11 @@ $result = $caller1->estConnection("SELECT * FROM train");
        <th>Train Name</th>
        <th>Source</th>
        <th>Destination</th>
-       <th>Arraival Time</th>
        <th>Departure Time</th>
+       <th>Arraival Time</th>
        <th>Seat Available</th>
        <th>Reference Date</th>
+       <th>Amount</th>
    </tr>
    
 </thead>
@@ -42,10 +43,11 @@ while ($rows = $result->fetch_assoc()) {
             <td><?php echo $rows['train_name']; ?></td>
             <td><?php echo $rows['train_source']; ?></td>
             <td><?php echo $rows['train_destination']; ?></td>
-            <td><?php echo $rows['arrival_time']; ?></td>
             <td><?php echo $rows['departure_time']; ?></td>
+            <td><?php echo $rows['arrival_time']; ?></td>
             <td><?php echo $rows['seats_available']; ?></td>
             <td><?php echo $rows['reference_date']; ?></td>
+            <td><?php echo $rows['amount']; ?></td>
         </tr>
     <?php
     }

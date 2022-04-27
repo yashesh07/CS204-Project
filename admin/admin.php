@@ -183,7 +183,7 @@
                         </div>
 
                         <div class="col-12">
-                            <label for="destinationTime"  class="form-label">Destination time</label>
+                            <label for="destinationTime"  class="form-label">Departure time</label>
                             <div class="input-group has-validation">
                             <input type="datetime-local" name="departureTime" class="form-control" id="destinationTime" placeholder="">
                             <div class="invalid-feedback">
