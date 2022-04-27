@@ -128,53 +128,6 @@
       </div>
 
       <div class="row g-5">
-        <!-- <div class="col-md-5 col-lg-4 order-md-last"> -->
-          <!-- <h4 class="d-flex justify-content-between align-items-center mb-3">
-            <span class="text-primary">Your details</span>
-            <span class="badge bg-primary rounded-pill">3</span>
-          </h4>
-          <ul class="list-group mb-3">
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Train name</h6>
-                <small class="text-muted" id="train_name">Rajdhani express</small>
-              </div>
-              <span class="text-muted">1234</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Source - Destination</h6>
-                <small class="text-muted">surat - diu</small>
-              </div>
-              <span class="text-muted">300km</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between lh-sm">
-              <div>
-                <h6 class="my-0">Date of booking</h6>
-                <small class="text-muted">Brief description</small>
-              </div>
-              <span class="text-muted">$5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between bg-light">
-              <div class="text-success">
-                <h6 class="my-0">Promo code</h6>
-                <small>EXAMPLECODE</small>
-              </div>
-              <span class="text-success">−$5</span>
-            </li>
-            <li class="list-group-item d-flex justify-content-between">
-              <span>Total (USD)</span>
-              <strong>$20</strong>
-            </li>
-          </ul> -->
-
-          <!-- <form class="card p-2">
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Promo code">
-              <button type="submit" class="btn btn-secondary">Redeem</button>
-            </div>
-          </form>
-        </div> -->
         <div class="col-md-7 col-lg-8" id="registration">
           <h4 class="mb-3">Registration</h4>
           <form action="User/sendCompData.php" method="POST" id="registrationForm">
@@ -193,6 +146,32 @@
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">DOB</label>
+                <input type="date" name="dob" class="form-control" autocomplete="false" placeholder="Choose DOB" onchange="calculate_age(this)">
+                <div class="invalid-feedback">
+                  Valid DOB is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="age" class="form-label">Age</label>
+                <input type="text" class="form-control" name="age" id="age" placeholder="" value="">
+                <div class="invalid-feedback">
+                  Valid age is required.
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <label for="gender" class="form-label">Gender</label>
+                  <select name="gender" class="form-control">
+                    <option value="none" selected>--select gender--</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">other</option>
+                  </select>
               </div>
 
               <div class="col-12">
@@ -362,6 +341,7 @@
 
   <script src="form-validation.js"></script>
   <script src="my_modules/pincode.js"></script>
+  <script src="my_modules/generateAge.js"></script>
   <script src="main.js"></script>
 </body>
 

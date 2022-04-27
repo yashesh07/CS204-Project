@@ -40,7 +40,8 @@ if(isset($_POST['bookingButton'])){
 
     $passenger_bookingDate=$_POST['passenger_bookingDate'];
 
-    // echo gettype($passenger_ID);
+    echo $dob;
+    echo $age;
 }
 
 
