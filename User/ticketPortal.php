@@ -11,9 +11,8 @@ $result = $caller->estConnection("SELECT train.train_no ,train.train_name,train.
 ?>
 
 <?php
-while ($rows = $result->fetch_assoc()) {
+if ($rows = $result->fetch_assoc()) {
     ?>
-   
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +52,7 @@ while ($rows = $result->fetch_assoc()) {
         <div class="even-info">
           <i class="fa fa-map-marker"></i>
           <p style="font-size: 1.5rem; letter-spacing: 4px;" id="amountInTicket">
-          ₹<?php echo $rows['amount']; echo "/-"?>
+          ₹<?php echo $rows['amount'];echo "/-"?>
           </p>
         </div>
         <div class="even-info">
@@ -70,4 +69,8 @@ while ($rows = $result->fetch_assoc()) {
 </html>
 <?php
     }
+    else{
+      echo '<script>alert("PNR does not exist !!!")</script>';
+    }
     ?>
+
