@@ -1,4 +1,5 @@
 <?php
+  sleep(2);
 $servername = "localhost:3325";
 $username = "root";
 $password = "";
