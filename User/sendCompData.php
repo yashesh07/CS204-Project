@@ -11,7 +11,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$time=time();
+$time=rand(1000000000,1999999999);
 date_default_timezone_set('Asia/Kolkata');
 
 $dateYmd = date('Y-m-d');
@@ -31,8 +31,8 @@ if(isset($_POST['bookingButton'])){
     $dob=$_POST['dob'];
     $age=$_POST['age'];
 
-    $transaction_ID=$time%1000;
-    $pnr_no=($time%1000)+999;
+    $transaction_ID=rand(1000000000,1999999999);
+    $pnr_no=rand(1000000000,1999999999);
     $amount=$_COOKIE['amount'];
 
     $train_no = $_COOKIE['train_number'];
