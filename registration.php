@@ -79,7 +79,7 @@
           <div class="carousel-caption text-start">
             <h1>Choose your destiny.</h1>
             <p>collect <strong>MOMENTS</strong> , not <strong>things</strong></p>
-            <p><a class="btn btn-lg btn-primary" href="#registration">Book now</a></p>
+            <p><a class="btn btn-lg btn-primary" href="#registration">Book Now</a></p>
           </div>
         </div>
       </div>
@@ -92,7 +92,7 @@
             <div class="carousel-caption">
               <h1>The places you'll go.</h1>
               <p>I'm thankful for this world, so I travel.</p>
-              <p><a class="btn btn-lg btn-primary" href="userLogin.php">Get details</a></p>
+              <p><a class="btn btn-lg btn-primary" href="userLogin.php">Generate Ticket</a></p>
             </div>
           </div>
         </form>
@@ -105,7 +105,7 @@
             <div class="carousel-caption text-end">
               <h1>Be a part of our community.</h1>
               <p>Responsibility is accepting that you are the cause and the solution of the matter.</p>
-              <p><a class="btn btn-lg btn-primary" href="adminLogin.php">Join us</a></p>
+              <p><a class="btn btn-lg btn-primary" href="adminLogin.php">Join Us</a></p>
             </div>
           </div>
       </div>
@@ -123,7 +123,7 @@
     <main>
       <div class="py-5 text-center">
         <img class="d-block mx-auto mb-4" src="images/logo.jpeg" alt="" width="450" height="150">
-        <h2>Booking portal</h2>
+        <h2>Booking Portal</h2>
         <p class="lead">If art is to have a special train, the critic must keep some seats reserved on it.</p>
       </div>
 
@@ -149,7 +149,7 @@
               </div>
 
               <div class="col-sm-6">
-                <label for="lastName" class="form-label">DOB</label>
+                <label for="lastName" class="form-label">Date of birth</label>
                 <input type="date" name="dob" class="form-control" autocomplete="false" placeholder="Choose DOB" onchange="calculate_age(this)">
                 <div class="invalid-feedback">
                   Valid DOB is required.
@@ -252,7 +252,7 @@
                   </p>
                 </div>
                 <div class="d-flex gap-5 justify-content-center">
-                  <button name="getTrainButton" class="btn btn-primary" id="getTrain">Get trains</button>
+                  <button name="getTrainButton" class="btn btn-primary" id="getTrain">Search</button>
                 </div>
               </form>
             </div>
@@ -321,7 +321,7 @@
 
             <hr class="my-4">
 
-            <button class="w-100 btn btn-primary btn-lg" name="bookingButton" id="confirmBooking" form="registrationForm">Confirm booking</button>
+            <button class="w-100 btn btn-primary btn-lg" name="bookingButton" id="confirmBooking" form="registrationForm">Confirm Booking</button>
         </div>
       </div>
     </main>

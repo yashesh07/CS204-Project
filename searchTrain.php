@@ -9,10 +9,16 @@
         $user_to = $_POST['user_to'];
         $user_date = $_POST['user_date'];
     }
-    $sql_getTrainDataQuery="SELECT * FROM TRAIN WHERE train_source='$user_from' AND train_destination='$user_to' AND reference_date='$user_date'";
+    $sql_getTrainDataQuery="SELECT * FROM TRAIN WHERE train_source='$user_from' AND train_destination='$user_to' AND reference_date='$user_date'AND seats_available>0";
 
 
     $result = $caller1->estConnection($sql_getTrainDataQuery);
+    $result1 = $caller1->estConnection($sql_getTrainDataQuery);
+    if($result1->fetch_assoc() == null){
+        echo '<br><br><center><img src="images\train.png" alt="error" width="150" height="150">';
+        echo '<br><br> No Train Available';
+        exit;
+    }
 
 ?>
 

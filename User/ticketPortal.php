@@ -8,12 +8,12 @@ if(isset($_POST['user_login_btn'])){
 }
 
 $result = $caller->estConnection("SELECT train.train_no ,train.train_name,train.train_source,train.train_destination,train.departure_time,train.arrival_time, train.amount, ticket.pnr_no,passenger.first_name,passenger.last_name,passenger.gender,passenger.age FROM (train NATURAL JOIN ticket)NATURAL JOIN passenger WHERE ticket.pnr_no='$pnr';");
+sleep(1);
 ?>
 
 <?php
-while ($rows = $result->fetch_assoc()) {
+if ($rows = $result->fetch_assoc()) {
     ?>
-   
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,7 @@ while ($rows = $result->fetch_assoc()) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ticket portal</title>
+    <title>Ticket Portal</title>
     <link href="ticketStyles.css" rel="stylesheet">
 </head>
 <body>
@@ -53,13 +53,13 @@ while ($rows = $result->fetch_assoc()) {
         <div class="even-info">
           <i class="fa fa-map-marker"></i>
           <p style="font-size: 1.5rem; letter-spacing: 4px;" id="amountInTicket">
-          ₹<?php echo $rows['amount']; ?>
+          ₹<?php echo $rows['amount'];echo "/-"?>
           </p>
         </div>
         <div class="even-info">
           <i class="fa fa-map-marker"></i>
           <p style="font-size: 1.5rem; letter-spacing: 4px;" id="pnrNumber">
-          PNR number : <span><?php echo $rows['pnr_no']; ?></span>
+          PNR : <span><?php echo $rows['pnr_no']; ?></span>
           </p>
         </div>
         <a href="#" style="background-color: green;">booked</a>
@@ -70,4 +70,8 @@ while ($rows = $result->fetch_assoc()) {
 </html>
 <?php
     }
+    else{
+      echo "<script>alert('Invalid PNR');window.location.href='../userLogin.php';</script>";
+    }
     ?>
+

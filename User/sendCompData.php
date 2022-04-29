@@ -1,4 +1,5 @@
 <?php
+  sleep(2);
 $servername = "localhost:3325";
 $username = "root";
 $password = "";
@@ -10,7 +11,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-$time=time();
+$time=rand(1000000000,1999999999);
 date_default_timezone_set('Asia/Kolkata');
 
 $dateYmd = date('Y-m-d');
@@ -30,8 +31,8 @@ if(isset($_POST['bookingButton'])){
     $dob=$_POST['dob'];
     $age=$_POST['age'];
 
-    $transaction_ID=$time%1000;
-    $pnr_no=($time%1000)+999;
+    $transaction_ID=rand(1000000000,1999999999);
+    $pnr_no=rand(1000000000,1999999999);
     $amount=$_COOKIE['amount'];
 
     $train_no = $_COOKIE['train_number'];
@@ -103,7 +104,7 @@ if ($conn->query($sql4) === TRUE) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Confirmation Page</title>
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -125,11 +126,11 @@ if ($conn->query($sql4) === TRUE) {
                     
                     <div class="invoice p-5">
                         <hr>
-                        <h5>Your Booking Confirmed!</h5> <span class="font-weight-bold d-block mt-4"><?php echo "Hello $first_name" ?></span>
-                        <span>You booking has been confirmed and your PNR no is <?php echo $pnr_no ?>!</span><br>
+                        <h5>Your Booking Confirmed !</h5> <span class="font-weight-bold d-block mt-4"><?php echo "Hello $first_name," ?></span>
+                        <span>You booking has been confirmed and your PNR is <?php echo $pnr_no ?></span><br>
 
 <hr>
-                        <p class="font-weight-bold mb-0">Thanks for booking with us!</p> <span>Dopa Team</span>
+                        <p class="font-weight-bold mb-0">Thanks for booking with us !</p> <span>Dopa Team</span>
                     </div>
                 </div>
             </div>

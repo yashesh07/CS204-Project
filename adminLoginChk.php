@@ -1,5 +1,5 @@
 <?php
-
+sleep(2);
     $admin_id = "Dopa70-1";
     $admin_password = "Group#2";
     if(isset($_POST['loginbutton'])){
@@ -12,6 +12,6 @@
     }
 
     else {
-        echo "<script> location.href='adminLogin.php'; </script>";
+        echo "<script>  alert('Wrong Credentials'); location.href='adminLogin.php'; </script>";
     }
 ?>

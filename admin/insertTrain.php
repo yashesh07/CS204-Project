@@ -27,9 +27,10 @@ $sql = "INSERT INTO train (train_no, train_name, train_source, train_destination
 VALUES ('$trainNumber', '$trainName', '$trainSource', '$trainDestination', '$arrivalTime','$departureTime','$totalSeats','$referenceDate','$amount')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "<script>alert('New Train added successfully !');window.location.href='admin.php';</script>";
+    sleep(1);
   } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo '<script>alert("Retry !")</script>';
   }
   $conn->close();
 

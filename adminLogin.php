@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Admin login portal</title>
+    <title>Admin Login</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
 
@@ -50,11 +50,11 @@
 <main class="form-signin">
   <form action="adminLoginChk.php" method="POST">
     <img class="mb-4" src="images/logo-transparent.png" alt="" width="300" height="90">
-    <h1 class="h3 mb-3 fw-normal">Admin portal login</h1>
+    <h1 class="h3 mb-3 fw-normal">Administration</h1>
 
     <div class="form-floating">
       <input type="text" name="admin_id" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Admin ID</label>
+      <label for="floatingInput">ID</label>
     </div>
     <div class="form-floating">
       <input type="password" name="admin_pass" class="form-control" id="floatingPassword" placeholder="Password">
